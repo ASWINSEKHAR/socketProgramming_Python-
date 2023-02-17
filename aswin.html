@@ -1,0 +1,110 @@
+<html>
+<head>
+   <style>
+       body{
+  font-size:20px;
+           color: white;
+           background-size: auto;
+       }
+        .box{ width: 900px;
+      float:right;
+      border:1px solid none;}
+      .box ul li{
+          width: 220px;
+          float:left;
+          margin: 10px auto;
+          text-align: center;
+      }
+.mainmenu
+.mainmenu a
+.mainmenu a:hover
+.mainmenu img{
+position: fixed;
+z-index: -1;
+top:0px; left:0px; width:100%; height: 100vh;
+opacity: 0.9;
+/*object-fit:cover;*/
+transition: all ease 0.5s;
+}
+  .wd{
+          width: 1800px;
+          height: 1000px;
+          background-color: black;
+          opacity: 0.85;
+          padding: 160px;
+      }
+      .wd h1{
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 300px;
+      }
+      .wd h4{
+          text-align: center;
+          color:darkgray;
+          font-weight: 500px;
+      }
+      .wd h2{
+          text-align: center;
+
+          font-weight: normal;
+          margin: 150px 40px;
+      }
+      .opt form , input[type="button"]{
+          background-color: black;
+          color:white;
+        /* padding:10px;*/
+          margin:-14px auto;
+          padding-left: 50px;
+          padding-right: 50px;
+          text-align: center;
+          font-size: 18px;
+      }
+    form, input[type="button"] {
+      animation: glowing 500ms infinite;
+      font-weight: 800%;
+     }
+     @keyframes glowing {
+0% {
+  background-color: red;
+}
+50% {
+  background-color: orange;
+}
+100% {
+  background-color: blue;
+}
+}
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(function(){
+var image = $(".mainmenu").find('img').attr('src');
+$(".mainmenu a").mouseover(function(){
+var newimg = $(this).attr('data-image');
+$(this).parent().find('img').attr("src", newimg);
+});
+});
+</script>
+  <div class="box">
+<div class="mainmenu">
+<img src="food.png">
+<a data-image = "car.jpg" href=""> Home</a>
+<a data-image = "quotes.jpg" href=""> Menu</a>
+<a href=""> FAQ</a>
+<a href=""> Contact</a>
+</div>
+  </div>
+  <div class="wd">
+<h1> Socket Programming Assignment </h1>
+<h4> <i>This webpage has been designed by ASWIN SEKHAR C S(B200884EC) as an html file and is viewed using socket programming in regards to Computer Networking course assignment .....</i></h4>
+<h2> For any queries or concerns, feel free to contact me...</h2>
+<div class="opt">
+<form action="" method="post">
+<input type="button" value="aswin_b200884ec@nitc.ac.in">
+</form>
+</div>
+</div>
+</body>
+</html>
